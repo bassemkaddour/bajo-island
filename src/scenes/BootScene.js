@@ -4,7 +4,8 @@ class BootScene extends Phaser.Scene {
         
         this.levels = {
             title: {key: 'TitleScene', path: 'assets/levels/title_screen.json'},
-            town: {key: 'WorldScene', path: 'assets/levels/level1.json'}
+            town: {key: 'WorldScene', path: 'assets/levels/level1.json'}, 
+            mayor: {key: 'WorldScene', path: 'assets/levels/mayor.json'}
         };
     }
     
