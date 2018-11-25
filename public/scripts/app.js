@@ -64,12 +64,22 @@ $(() => {
     const nameData = $('.player-name').serialize();
 
     $.ajax({
-      url: 'https://bajoisland.herokuapp.com/register',
+      url: 'https://bajo-island-api.herokuapp.com/api/register',
       method: 'POST',
       data: nameData,
       withCredentials: true,
       success: function(result) {
         console.log("data returning: ", result);
+        $.ajax({
+          url: 'https://bajoisland.herokuapp.com/register',
+          method: 'POST', 
+          success: function(res) {
+            console.log('second data return', res)
+          }, 
+          error: function(error) {
+            console.log("nested error", error)
+          }
+        });
       },
       error: function(error) {
         console.log("error: ", error);
