@@ -72,7 +72,8 @@ $(() => {
         console.log("data returning: ", result);
         $.ajax({
           url: 'https://bajoisland.herokuapp.com/register',
-          method: 'POST', 
+          method: 'POST',
+          data: result, 
           success: function(res) {
             console.log('second data return', res)
           }, 

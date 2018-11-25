@@ -2,11 +2,14 @@ const express = require('express');
 const path = require('path');
 const port = process.env.PORT || 8080;
 const app = express();
+const bodyParser  = require('body-parser');
 const cookieSession = require('cookie-session');
 
 
 // the __dirname is the current directory from where the script is running
 app.use(express.static(__dirname));
+
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(cookieSession({
   name: 'session',
@@ -26,8 +29,8 @@ app.get('*', (req, res) => {
 });
 
 app.post('/register', (req, res) => {
-  console.log('before cookie', req.session.id);
-  req.session.id = 2;
+  console.log('before cookie', req.body.result);
+  req.session.id = req.body.result;
   console.log('after cookie', req.session.id);
   res.send('hi');
 });
