@@ -64,7 +64,7 @@ $(() => {
     const nameData = $('.player-name').serialize();
 
     $.ajax({
-      url: 'https://bajo-island-api.herokuapp.com/api/register',
+      url: 'https://bajoisland.herokuapp.com/register',
       method: 'POST',
       data: nameData,
       withCredentials: true,

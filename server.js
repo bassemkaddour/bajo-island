@@ -18,6 +18,11 @@ app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, 'index.html'));
 });
 
+app.post('/register', (req, res) => {
+  req.session.id = 2;
+  res.send('hi');
+});
+
 app.listen(process.env.PORT || 3000, function(){
   console.log("Express server listening on port", this.address().port);
 });
