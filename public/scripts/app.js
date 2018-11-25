@@ -67,6 +67,7 @@ $(() => {
       url: 'https://bajo-island-api.herokuapp.com/api/register',
       method: 'POST',
       data: nameData,
+      withCredentials: true,
       success: function(result) {
         console.log("data returning: ", result);
       },
