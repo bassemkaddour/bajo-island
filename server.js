@@ -29,7 +29,7 @@ app.get('*', (req, res) => {
 });
 
 app.post('/register', (req, res) => {
-  console.log('before cookie', req.body.result);
+  console.log('before cookie', req.body);
   req.session.id = req.body.result;
   console.log('after cookie', req.session.id);
   res.send('hi');
