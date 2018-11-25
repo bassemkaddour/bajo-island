@@ -22,8 +22,8 @@ app.use(function(req, res, next) {
 
 // send the user to index html page inspite of the url
 app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, 'index.html'));
   console.log('COOKIESERVER', req.session.id)
+  res.sendFile(path.resolve(__dirname, 'index.html'));
 });
 
 app.post('/register', (req, res) => {
