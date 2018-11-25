@@ -22,12 +22,13 @@ app.use(function(req, res, next) {
 
 // send the user to index html page inspite of the url
 app.get('*', (req, res) => {
-  console.log('COOKIESERVER', req.session.id)
   res.sendFile(path.resolve(__dirname, 'index.html'));
 });
 
 app.post('/register', (req, res) => {
+  console.log('before cookie', req.session.id);
   req.session.id = 2;
+  console.log('after cookie', req.session.id);
   res.send('hi');
 });
 
