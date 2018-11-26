@@ -26,10 +26,10 @@ app.use(function(req, res, next) {
 // send the user to index html page inspite of the url
 app.get('/', (req, res) => {
   res.sendFile(path.resolve(__dirname, 'index.html'));
-  if (req.session.id) {
-    const loginBtn = document.querySelector(‘.navbar__reg-btn’);
-    loginBtn.style.display = “none”;
-  }
+  // if (req.session.id) {
+  //   const loginBtn = document.querySelector(‘.navbar__reg-btn’);
+  //   loginBtn.style.display = “none”;
+  // }
 });
 
 app.post('/register', (req, res) => {
