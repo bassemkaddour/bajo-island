@@ -1,6 +1,6 @@
 # Bajo Island
 
-Bajo Island is a top-down choose your own adventure game, designed for the user to experience the impacts of environmental change. Built on Phaser, Webpack, Express, and Posgres, the project also utilises AJAX, jQuery, SASS, and Tiled. It is deployed on Heroku at https://bajoisland.herokuapp.com/.
+Bajo Island is a top-down choose your own adventure game, designed for the user to experience the impacts of environmental change. Built on Phaser, Webpack, Express, and Posgres, the project also utilises AJAX, jQuery, SASS, and Tiled. It is deployed at http://www.bajoisland.com/.
 
 ## Premise
 
